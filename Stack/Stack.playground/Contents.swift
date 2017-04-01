@@ -34,6 +34,7 @@ public struct Stack<T> {
 
 }
 
+//extending the generic type
 extension Stack: Sequence {
     public func makeIterator() -> AnyIterator<T> {
     var curr = self
@@ -44,8 +45,31 @@ extension Stack: Sequence {
     }
 }
 
-//let's push a number onto the stack
-//stack.push(9)
+/*
+Now this is important, create a new Stack instance by writing the type to be stored in the stack within angle brackets
+e.g Stack<string>():
+ 
+ var stackOfStrings = Stack<String>()
+ stackOfStrings.push("hello")
+*/
 
+
+//So lets make a new stack instance for Int
+
+var stackOfInts = Stack<Int>()
+
+//let's push a number onto the stack
+stackOfInts.push(9)
 //The stack is now [9]. Lets push 5 on
+stackOfInts.push(5)
+
+stackOfInts.push(100)
+
+stackOfInts.push(45)
+
+//The stack shouyld now be [9, 5, 100,45]
+
+// let's check by popping the top number off the stack
+
+stackOfInts.pop()
 
