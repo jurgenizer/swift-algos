@@ -73,3 +73,15 @@ stackOfInts.push(45)
 
 stackOfInts.pop()
 
+stackOfInts.pop()
+
+stackOfInts.pop()
+
+
+stackOfInts.pop()
+
+stackOfInts.pop()
+
+//nil returned when nothing is left to pop off the stack
+
+
