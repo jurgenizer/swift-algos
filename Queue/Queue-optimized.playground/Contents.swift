@@ -32,8 +32,8 @@ public struct Queue<T> {
         head  += 1 //add 1 to the head
         
         let percentage = Double(head)/Double(array.count)
-        if array.count > 50 && percentage > 0.25 { //why were these values chosen?
-            array.removeFirst(head)
+         if array.count > 50 && percentage > 0.25 { //why were these values chosen?
+                 array.removeFirst(head)
             head = 0
         }
         
@@ -53,8 +53,30 @@ public struct Queue<T> {
 
 //Ok lets test it1
 
-//Enqueue a number
 
-queue.enque(10)
+var q = Queue<String>()
+q.array //Our empty array
+
+//Enqueue a name or four
+q.enqueue("Jurgen")
+q.enqueue("R2D2")
+q.enqueue("C3PO")
+q.enqueue("Cat")
+q.array // should be[{some,Jurgen"},{some,"R2D2"}, etc
+
+q.count
+
+q.dequeue() //eject Jurgen
+q.array //becomes be[nil,{some,"R2D2"}, etc
+
+q.count
+
+q.dequeue()
+q.array
+q.count
+
+q.enqueue("vader")
+q.array
+
 
 
